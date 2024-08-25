@@ -131,7 +131,7 @@ class _NavigationView extends State<NavigationView>{
                       height: double.maxFinite,
                       child: Row(
                         textDirection: TextDirection.rtl,
-                        children:widget.items.map((e) => Flexible(flex: 1,child: InkWell(
+                        children:widget.items.map((e) => Flexible(flex: (_currentPage == widget.items.indexOf(e)) ? 2 : 0,child: InkWell(
                           onTap: (){
 
                             setState(() {
